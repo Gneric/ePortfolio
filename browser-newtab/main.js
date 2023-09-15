@@ -30,7 +30,7 @@ $(function () {
     function populateList(object) {
         $.each(object.favourites, function (key, val) {
             linktxt = val.placeholder ? val.placeholder : val.url
-            $("#cheat ul").append("<li><a href='" + val.url + "' target='_blank'><span>" + val.key + "</span><span>" + linktxt + "</span></a></li>");
+            $("#cheat ul").append("<li><a href='" + val.url + "' target='_self'><span>" + val.key + "</span><span>" + linktxt + "</span></a></li>");
         });
 
         $("ul li").sort(function (a, b) {
