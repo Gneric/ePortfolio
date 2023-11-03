@@ -7,8 +7,7 @@
     {
       "key": ":ytb",
       "url": "https://www.youtube.com/",
-      "placeholder": "Youtube",
-      "background": "#1877f2"
+      "placeholder": "Youtube"
     },
     {
       "key": ":wsp",
@@ -18,7 +17,7 @@
     {
       "key": ":gth",
       "url": "http://github.com",
-      "placeholder": "github"
+      "placeholder": "Github"
     },
     {
       "key": ":twt",
@@ -36,14 +35,34 @@
       "placeholder": "The Pirate Bay"
     },
     {
-      "key": ":gpt",
-      "url": "https://chat.openai.com/?model=text-davinci-002-render-sha",
-      "placeholder": "Chat GPT"
+      "key": ":sft",
+      "url": "https://softarchive.is/full/",
+      "placeholder": "SoftArchive"
+    },
+    {
+      "key": ":pcy",
+      "url": "https://www.reddit.com/r/Piracy/",
+      "placeholder": "Piracy"
     },
     {
       "key": ":plx",
       "url": "https://app.plex.tv/desktop/#!/",
       "placeholder": "Plex"
+    },
+    {
+      "key": ":rdt",
+      "url": "https://www.reddit.com/",
+      "placeholder": "Reddit"
+    },
+    {
+      "key": ":anw",
+      "url": "https://aniwatch.to/home",
+      "placeholder": "AniWatch"
+    },
+    {
+      "key": ":zlb",
+      "url": "https://z-library.se/?signAll=1&ts=0858",
+      "placeholder": "Z-Library"
     }
   ]
 }
