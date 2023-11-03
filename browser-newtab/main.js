@@ -61,7 +61,7 @@ $(function () {
             link = "http://" + link;
         }
 
-        window.location.href = link;
+        window.open(link, '_blank');
         $("#box").blur();
         $("#box").val("");
         $("#box").trigger("keyup", { keyCode: 8, bubbles: true, cancelable: true })
