@@ -4,6 +4,6 @@ import Michi from '@/views/michi/michi'
 
 export default function Home() {
   return (
-    <Michi/>
+    <BlankPage/>
   )
 }

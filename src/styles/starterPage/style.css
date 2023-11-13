@@ -1,21 +1,16 @@
-html, input {
-  background-color: black;
-  color: white;
-}
-
-body {
+.blank-body {
   margin: auto;
   opacity: 1;
   transition: all .8s ease-in-out;
   width: 100%;
 }
 
-a {
+.blank-a {
   cursor: pointer;
   text-decoration: none;
 }
 
-a:focus {
+.blank-a:focus {
   outline: none;
 }
 
@@ -28,12 +23,11 @@ li a:focus span:last-child {
   background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
-#container {
+#blank-container {
   align-items: center;
   display: flex;
   height: 100vh;
   margin: auto;
-  width: 70%;
 }
 
 #blocked {
@@ -53,10 +47,6 @@ li a:focus span:last-child {
   transform: rotate(-10deg);
 }
 
-#search {
-  padding: 50px 10px;
-}
-
 #box {
   border: 0;
   box-sizing: border-box;
@@ -73,7 +63,7 @@ li a:focus span:last-child {
   padding-top: 20px;
   margin: 0 auto;
   width: 60%;
-  display: none;
+  padding: 50px 10px;
 }
 
 #links ul {
