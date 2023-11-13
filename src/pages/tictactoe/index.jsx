@@ -1,23 +1,10 @@
 'use client';
-import '@/styles/michi/style.css';
+import '@/styles/tictactoe/style.css';
 import { useState } from 'react';
+import Square from '@/components/tictactoe/square';
+import StatusBox from '@/components/tictactoe/statusBox';
 
-function Square({value, onSquareClick}) {
-    return <button className='square' onClick={onSquareClick} > {value} </button>
-}
-
-function StatusBox({statusMessage, onRestarGameClick}){
-    return (
-        <>
-            <div className='status'>{statusMessage}</div>
-            <div>
-                <button onClick={onRestarGameClick}> Restart Game </button>
-            </div>
-        </>
-    )
-}
-
-export default function Board(sq) {
+export default function Board() {
     const [xIsNext, setXIsNext] = useState(true);
     const [squares, setSquares] = useState(Array(9).fill(null));
     let winner = checkWinner(squares)

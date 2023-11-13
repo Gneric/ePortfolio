@@ -1,9 +1,10 @@
-import Porfolio from '@/views/Portfolio/Porfolio'
-import BlankPage from '@/views/StarterPage/starterPage'
-import Michi from '@/views/michi/michi'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <BlankPage/>
+    <main>
+        <h1> Home Page </h1>
+        <Link href="/blankTab" >Link2</Link>
+    </main>
   )
 }

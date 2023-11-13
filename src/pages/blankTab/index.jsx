@@ -1,7 +1,6 @@
 import '@/styles/starterPage/style.css'
 import '@/styles/starterPage/fonts.css'
 
-
 const greetingText = "おかえり！"
 const backgroundColor = "#171928"
 const textColor = "#c7b7c7"
@@ -39,7 +38,7 @@ const favourites = [
     }
 ]
 
-function Link({ value, prefix, url }) {
+function Linkli({ value, prefix, url }) {
     return (
         <li>
             <a href={url} className='black-a' target='_blank'>
@@ -53,7 +52,7 @@ function Link({ value, prefix, url }) {
 export default function blankPage () {
 
     const links = favourites.map( item => {
-        return <Link
+        return <Linkli
             key={item.placeholder}
             value={item.placeholder}
             prefix={item.key}
