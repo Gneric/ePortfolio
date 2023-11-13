@@ -2,7 +2,6 @@
   "greeting_text": "おかえり！",
   "background": "#171928",
   "foreground": "#c7b7c7",
-  "search_engine": "https://www.google.co.id/search?q=",
   "favourites": [
     {
       "key": ":ytb",
@@ -18,7 +17,7 @@
     {
       "key": ":gth",
       "url": "http://github.com",
-      "placeholder": "github"
+      "placeholder": "Github"
     },
     {
       "key": ":twt",
@@ -29,16 +28,6 @@
       "key": ":igm",
       "url": "http://instagram.com",
       "placeholder": "Instagram"
-    },
-    {
-      "key": ":tpb",
-      "url": "https://thepiratebay.org/index.html",
-      "placeholder": "The Pirate Bay"
-    },
-    {
-      "key": ":gpt",
-      "url": "https://chat.openai.com/?model=text-davinci-002-render-sha",
-      "placeholder": "Chat GPT"
     },
     {
       "key": ":plx",

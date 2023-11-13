@@ -1,30 +1,29 @@
 import '@/styles/starterPage/style.css'
 import '@/styles/starterPage/fonts.css'
-import './main.js'
+// import '@/views/StarterPage/main.js'
+// import '@/views/StarterPage/tinycolor.js'
 
 export default function blankPage () {
+    const backgroundColor = ""
+    const textColor = ""
+    const greetingText = "おかえり！"
+
     return (
-        <body onload="document.body.style.opacity='1'">
+        <body>
             <div id="container">
                 <div id="blocked">
-                    <div id="logo">おかえり！</div>
+                    <div id="logo">{greetingText}</div>
                     <div id="search">
-                        <form>
-                            <input id="box" type="text" autocomplete="off" placeholder='type  :<key>  and  hit enter to search' />
-                        </form>
-                        <div id="cheatp">
-                            <div id="cheat">
+                        <div id="linkblock">
+                            <div id="links">
                                 <ul>
-                                    {/* Aqui iran los links (Generados por el web.json) */}
+                                    testing again{/* Aqui iran los links (Generados por el web.json) */}
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <script type="text/javascript" src="browser-newtab/jquery.min.js"></script>
-            <script type="text/javascript" src="browser-newtab/main.js"></script>
-            <script type="text/javascript" src="browser-newtab/tinycolor.js"></script>
         </body>
     )
 }

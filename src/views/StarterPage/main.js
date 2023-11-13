@@ -1,5 +1,7 @@
 const JSON_PATH = '@/data/starterPage/web.json'
 
+
+
 var stylishHTML = function (conf) {
     $("*").css("background", conf.background);
     $("*").css("color", conf.foreground);
@@ -14,7 +16,6 @@ var stylishHTML = function (conf) {
         $("#cheat li span:last-child ").css("background","rgba(200,200,200, 0.8)");
     }
 };
-
 $(function () {
     var conf = {};
     var notfavs = new RegExp("^:[u|s] (.*)$");
@@ -68,4 +69,4 @@ $(function () {
         $("#box").val("");
         $("#box").trigger("keyup", { keyCode: 8, bubbles: true, cancelable: true })
     });
-});
+})
