@@ -1,9 +1,8 @@
 import '@/styles/starterPage/style.css'
 import '@/styles/starterPage/fonts.css'
+import Colors from '@/utils/pallete'
 
 const greetingText = "おかえり！"
-const backgroundColor = "#171928"
-const textColor = "#c7b7c7"
 const favourites = [
     {
       "key": ":ytb",
@@ -43,7 +42,7 @@ function Linkli({ value, prefix, url }) {
         <li>
             <a href={url} className='black-a' target='_blank'>
                 <span>{prefix}</span>
-                <span style={{color: textColor}} >{value}</span>
+                <span style={{color: Colors.TextColor}} >{value}</span>
             </a>
         </li>
     )
@@ -61,9 +60,9 @@ export default function blankPage () {
     })
 
     return (
-        <div id="blank-container" style={{ backgroundColor: backgroundColor, width: '100%' }} >
+        <div id="blank-container" style={{ backgroundColor: Colors.BackgroundColor, width: '100%' }} >
             <div id="blocked">
-                <div id="logo" style={{ color: textColor }} >{greetingText}</div>
+                <div id="logo" style={{ color: Colors.TextColor }} >{greetingText}</div>
                 <div id="linkblock">
                     <div id="links">
                         <ul>{links}</ul>

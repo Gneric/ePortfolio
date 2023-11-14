@@ -3,6 +3,7 @@ import '@/styles/tictactoe/style.css';
 import { useState } from 'react';
 import Square from '@/components/tictactoe/square';
 import StatusBox from '@/components/tictactoe/statusBox';
+import Colors from '@/utils/pallete'
 
 export default function Board() {
     const [xIsNext, setXIsNext] = useState(true);
@@ -56,7 +57,7 @@ export default function Board() {
     }
 
     return (
-        <>
+        <div className='tictactoe-mainbody' style={{ backgroundColor: Colors.BackgroundColor }}>
             <div className='board-row'>
                 <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
                 <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -73,6 +74,6 @@ export default function Board() {
                 <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
             </div>
             <StatusBox statusMessage={status} onRestarGameClick={ () => restartGame() } />
-        </>
+        </div>
     );
 }
