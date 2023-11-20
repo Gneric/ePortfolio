@@ -1,9 +1,7 @@
 import '@/styles/starterPage/style.css'
-import '@/styles/starterPage/fonts.css'
 import Colors from '@/utils/pallete'
 import links from '@/data/links'
 
-const greetingText = "おかえり！"
 function Linkli({ value, prefix, url }) {
     return (
         <li>
@@ -29,7 +27,7 @@ export default function blankPage () {
     return (
         <div id="blank-container" style={{ backgroundColor: Colors.backgroundColor, width: '100%' }} >
             <div id="blocked">
-                <div id="logo" style={{ color: Colors.textColor }} >{greetingText}</div>
+                <div id="logo" style={{ color: Colors.textColor }} >おかえり！</div>
                 <div id="linkblock">
                     <div id="links">
                         <ul>{generatedlinks}</ul>
