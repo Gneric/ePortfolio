@@ -1,0 +1,68 @@
+{
+  "greeting_text": "おかえり！",
+  "background": "#171928",
+  "foreground": "#c7b7c7",
+  "search_engine": "https://www.google.co.id/search?q=",
+  "favourites": [
+    {
+      "key": ":ytb",
+      "url": "https://www.youtube.com/",
+      "placeholder": "Youtube"
+    },
+    {
+      "key": ":wsp",
+      "url": "https://web.whatsapp.com/",
+      "placeholder": "Whatsapp"
+    },
+    {
+      "key": ":gth",
+      "url": "http://github.com",
+      "placeholder": "Github"
+    },
+    {
+      "key": ":twt",
+      "url": "https://www.twitch.tv/",
+      "placeholder": "Twitch"
+    },  
+    {
+      "key": ":igm",
+      "url": "http://instagram.com",
+      "placeholder": "Instagram"
+    },
+    {
+      "key": ":tpb",
+      "url": "https://thepiratebay.org/index.html",
+      "placeholder": "The Pirate Bay"
+    },
+    {
+      "key": ":sft",
+      "url": "https://softarchive.is/full/",
+      "placeholder": "SoftArchive"
+    },
+    {
+      "key": ":pcy",
+      "url": "https://www.reddit.com/r/Piracy/",
+      "placeholder": "Piracy"
+    },
+    {
+      "key": ":plx",
+      "url": "https://app.plex.tv/desktop/#!/",
+      "placeholder": "Plex"
+    },
+    {
+      "key": ":rdt",
+      "url": "https://www.reddit.com/",
+      "placeholder": "Reddit"
+    },
+    {
+      "key": ":anw",
+      "url": "https://aniwatch.to/home",
+      "placeholder": "AniWatch"
+    },
+    {
+      "key": ":zlb",
+      "url": "https://z-library.se/?signAll=1&ts=0858",
+      "placeholder": "Z-Library"
+    }
+  ]
+}
