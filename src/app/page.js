@@ -13,7 +13,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // document.body.className = theme;
     console.log('Toggle theme');
   }, [theme]);
 
