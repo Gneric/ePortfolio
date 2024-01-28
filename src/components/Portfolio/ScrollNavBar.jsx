@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import NavBarLink from "./NavBarLink";
 
-import 'animate.css';
-
 export default function ScrollNavBar () {
     const [isSticky, setIsSticky] = useState(false);
 
@@ -34,18 +32,20 @@ export default function ScrollNavBar () {
     }, [])
 
     return (
-        <nav id='nav' key='stickyNavBar' className="top-0 sticky">
+        <nav id='nav' key='stickyNavBar' className="top-0 sticky z-20">
         {
             !isSticky ? (
                 <div className="w-full h-32 grid place-items-center bg-slate-400">
                     <p className="text-black font-bold text-4xl animate-bounce" >
-                        Sigue bajando
+                        Keep Scrolling
                     </p>
                 </div> 
+
                 ) : (
                 <div className="w-full h-32 flex flex-row justify-evenly bg-slate-400">
                     <NavBarLink key={'About'} text='About' href='#About' />
                     <NavBarLink key={'Experience'} text='Experience' href='#Experience' />
+                    <NavBarLink key={'Projects'} text='Projects' href='#Projects' />
                     <NavBarLink key={'Abilities'} text='Abilities' href='#Abilities' />
                     <NavBarLink key={'AFK'} text='AFK' href='#AFK' />
                 </div>
