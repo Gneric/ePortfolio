@@ -7,45 +7,71 @@ export default function Body() {
   const projects = [
     {
       title: 'Portal de Homologacion',
-      description: 'Portal web que permite a los clientes homologar los codigos internos con los codigos de sus distribuidores para el seguimientos de estos',
+      description: 'Desarrollo de servicio API para el correcto funcionamiento y eficiencia, ademas de la creacion y preparacion de procesos para su sincronia con el proceso diario de actualizacion.',
       tooltip: (
         <>
-          <p>Python</p>
           <p>NodeJS</p>
-          <p>Prisma</p>
+          <p>Express</p>
         </>
       )
     },
     {
       title: 'Portal Sales and Operations Planning',
-      description: 'Portal web que permite a los clientes homologar los codigos internos con los codigos de sus distribuidores para el seguimientos de estos',
+      description: 'Desarollo e implementacion del servicio API para el manejo y transformacion de archivos, creacion de base de datos GraphQL para el almacenamiento temporal de datos y uso de subscripciones.',
       tooltip: (
         <>
           <p>Python</p>
-          <p>NodeJS</p>
-          <p>Prisma</p>
+          <p>Flask</p>
+          <p>Pandas</p>
+          <p>GraphQL</p>
+          <p>Hasura</p>
         </>
       )
     },
     {
       title: 'Autoservicio',
-      description: 'Portal web que permite a los clientes homologar los codigos internos con los codigos de sus distribuidores para el seguimientos de estos',
+      description: 'Diseño e implementacion de base de datos y servicio API para la verificacion de archivos mediante una configuracion modular para su ingesta directa a la base de datos.',
       tooltip: (
         <>
+          <p>MySQL</p>
           <p>Python</p>
-          <p>NodeJS</p>
-          <p>Prisma</p>
+          <p>Flask</p>
+          <p>Pandas</p>
         </>
       )
     },
     {
-      title: 'Strategio v3',
-      description: 'Portal web que permite a los clientes homologar los codigos internos con los codigos de sus distribuidores para el seguimientos de estos',
+      title: 'Servicio API de Ingesta de datos',
+      description: 'Creacion e implementacion de servicio API para la ingesta de datos modulable por fechas y tipo de archivos.',
       tooltip: (
         <>
           <p>Python</p>
+          <p>Flask</p>
+          <p>Pandas</p>
+        </>
+      )
+    },
+    {
+      title: 'Servicio API de consumo de datos',
+      description: 'Creacion e implementacion de servicio API para el consumo de data para el uso de los clientes.',
+      tooltip: (
+        <>
           <p>NodeJS</p>
+          <p>Express</p>
           <p>Prisma</p>
+          <p>Vue3</p>
+        </>
+      )
+    },
+    {
+      title: 'Strategio V3',
+      description: 'Diseño e implementacion de base de datos, creacion del servicio API y desarrollo frontend para la actual version del portal de principal uso por los clientes de la empresa.',
+      tooltip: (
+        <>
+          <p>NodeJS</p>
+          <p>Express</p>
+          <p>Prisma</p>
+          <p>Vue3</p>
         </>
       )
     }
