@@ -4,6 +4,8 @@ import Body from './body'
 
 import ScrollNavBar from "@/components/Portfolio/ScrollNavBar"
 
+import '@/styles/portfolio/style.css'
+
 export default function Porfolio() {
     return (
         <>

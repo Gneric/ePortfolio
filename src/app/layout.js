@@ -1,4 +1,4 @@
-import '@/styles/starterPage/fonts.css'
+import '@/styles/fonts/fonts.css'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
