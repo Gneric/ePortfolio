@@ -1,6 +1,6 @@
-import '@/styles/starterPage/style.css'
+import '@/styles/blankTab/style.css'
 import Colors from '@/utils/pallete'
-import links from '@/data/links'
+import links from '@/data/blanktab/links'
 
 function Linkli({ value, prefix, url }) {
     return (
@@ -25,15 +25,17 @@ export default function blankPage () {
     })
 
     return (
-        <div id="blank-container" style={{ backgroundColor: Colors.backgroundColor, width: '100%' }} >
-            <div id="blocked">
-                <div id="logo" style={{ color: Colors.textColor }} >おかえり！</div>
-                <div id="linkblock">
-                    <div id="links">
-                        <ul>{generatedlinks}</ul>
+        <body id="custombody" >
+            <div id="blank-container" style={{ backgroundColor: Colors.backgroundColor, width: '100%' }} >
+                <div id="blocked">
+                    <div id="logo" style={{ color: Colors.textColor }} >おかえり！</div>
+                    <div id="linkblock">
+                        <div id="links">
+                            <ul>{generatedlinks}</ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </body>
     )
 }
