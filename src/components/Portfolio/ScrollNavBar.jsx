@@ -1,11 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
 import NavBarLink from "./NavBarLink";
 
 import { dictionary } from '@/data/portfolio/dictionary'
 
 export default function ScrollNavBar () {
     const dict = dictionary.Sections
-    const [isSticky, setIsSticky] = useState(true);
+    const isSticky = true
+    // const [isSticky, setIsSticky] = useState(true);
 
     // useEffect(() => {
     //     const navigation = document.getElementById('nav')

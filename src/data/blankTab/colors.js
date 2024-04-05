@@ -1,4 +1,4 @@
-const colors = {
+const Colors = {
     backgroundColor: {
         light: "#ebe9f1",
         dark: "#171928"
@@ -21,4 +21,4 @@ const colors = {
     }
 }
 
-export default colors
+export default Colors

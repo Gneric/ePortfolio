@@ -1,41 +1,31 @@
+import '@/styles/fonts/fonts.css'
 import '@/styles/blankTab/style.css'
-import Colors from '@/utils/pallete'
+import Colors from '@/data/blankTab/colors'
 import links from '@/data/blanktab/links'
-
-function Linkli({ value, prefix, url }) {
-    return (
-        <li>
-            <a href={url} className='black-a' target='_blank'>
-                <span>{prefix}</span>
-                <span style={{color: Colors.textColor }} >{value}</span>
-            </a>
-        </li>
-    )
-}
+import LinkLi from '@/components/blankTab/linkLi'
 
 export default function blankPage () {
 
     const generatedlinks = links.map( item => {
-        return <Linkli
+        return <LinkLi
             key={item.placeholder}
             value={item.placeholder}
             prefix={item.key}
             url={item.url}
+            textColor={Colors.textColor.dark}
         />
     })
 
     return (
-        <body id="custombody" >
-            <div id="blank-container" style={{ backgroundColor: Colors.backgroundColor, width: '100%' }} >
-                <div id="blocked">
-                    <div id="logo" style={{ color: Colors.textColor }} >おかえり！</div>
-                    <div id="linkblock">
-                        <div id="links">
-                            <ul>{generatedlinks}</ul>
-                        </div>
+        <div id="blank-container" className='h-screen'  style={{ backgroundColor: Colors.backgroundColor.dark, width: '100%' }} >
+            <div id="blocked">
+                <div id="logo" style={{ color: Colors.textColor.dark }} >おかえり！</div>
+                <div id="linkblock">
+                    <div id="links">
+                        <ul>{generatedlinks}</ul>
                     </div>
                 </div>
-            </div>
-        </body>
+            </div>-
+        </div>
     )
 }

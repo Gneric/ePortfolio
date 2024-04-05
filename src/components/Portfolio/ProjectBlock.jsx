@@ -2,7 +2,7 @@
 export default function ProjectBlock({ title, description, tooltip, directionIndex = 0 }) {
   
   return (
-    <div className={`w-2/5 mx-10 mb-10`}>
+    <div className={`md:w-5/6 lg:w-2/5 mx-10 mb-10`}>
       <div className="bg-slate-600 h-52 p-5 z-10">
         <p className="text-2xl">{title}</p>
         <p className="text-l">{tooltip}</p>
