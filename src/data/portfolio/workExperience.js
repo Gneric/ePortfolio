@@ -35,24 +35,29 @@ export const jobs =
         tooltip: 'Python - Flask - Pandas - GraphQL'
       },
       {
-        title: 'Autoservicio',
+        title: 'Herramienta Autoservicio',
         description: 'Diseño e implementacion de base de datos y servicio API para la verificacion de archivos mediante una configuracion modular para su ingesta directa a la base de datos.',
         tooltip: 'Python - Flask - Pandas - MySQL'
       },
       {
-        title: 'Servicio API de Ingesta de datos',
+        title: 'Servicios API de ingesta de datos',
         description: 'Creacion e implementacion de servicio API para la ingesta de datos modulable por fechas y tipo de archivos.',
         tooltip: 'Python - Flask - Pandas'
       },
       {
-        title: 'Servicio API de consumo de datos',
+        title: 'Servicios API de consumo de datos',
         description: 'Creacion e implementacion de servicio API para uso de los clientes dandoles acceso directo a datos trabajados.',
         tooltip: 'NodeJS - Express - Prisma'
       },
       {
-        title: 'Strategio V3',
+        title: 'Portal Strategio Ver.3',
         description: 'Diseño e implementacion de base de datos, creacion del servicio API y desarrollo frontend para la actual version del portal de principal uso por los clientes de la empresa.',
         tooltip: 'NodeJS - Express - Prisma - Vue'
+      },
+      {
+        title: 'Sistema de registro de acciones',
+        description: 'Diseño e implementacion de sistema de logs para almacenar las acciones realizadas dentro de los productos de la empresa',
+        tooltip: 'Python - Flask - Pandas - NodeJS'
       }
     ]
   }
