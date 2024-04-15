@@ -5,6 +5,9 @@ import { jobs } from '@/data/portfolio/workExperience'
 import { projects } from '@/data/portfolio/personalProjects'
 import { dictionary } from '@/data/portfolio/dictionary'
 
+
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar } from "@nextui-org/react";
+
 export default function Body() {
   const dict = dictionary.Sections
 
@@ -49,7 +52,7 @@ export default function Body() {
         <p className='text-6xl mb-2' >{dict.Abilities.ESP}</p>
         <p className='text-l mb-12'>Aqui mostrare parte de mi formacion y las herramientas que he utilizado en mi carrera profesional</p>
         <div className=''>
-          
+            
         </div>
       </section>
 
