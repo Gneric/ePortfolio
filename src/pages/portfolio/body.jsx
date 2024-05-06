@@ -5,9 +5,6 @@ import { jobs } from '@/data/portfolio/workExperience'
 import { projects } from '@/data/portfolio/personalProjects'
 import { dictionary } from '@/data/portfolio/dictionary'
 
-
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Avatar } from "@nextui-org/react";
-
 export default function Body() {
   const dict = dictionary.Sections
 
@@ -34,7 +31,7 @@ export default function Body() {
       <section id="Projects" className="w-full bg-slate-500 snap-start p-10">
         <p className='text-6xl mb-2' >{dict.Projects.ESP}</p>
         <p className='text-l mb-12'>Estos son proyectos que hago en mis tiempos libres para explorar nuevas tecnologias y volver realidad ideas</p>
-        <div className='flex flex-wrap justify-around mb-5'>
+        <div className='flex flex-wrap mb-5 justify-start'>
           {
             projects.map( project => (
               <ProjectBlock 
@@ -48,7 +45,7 @@ export default function Body() {
         </div>
       </section>
 
-      <section id="Abilities" className="w-full bg-slate-500 snap-start p-10">
+      {/* <section id="Abilities" className="w-full bg-slate-500 snap-start p-10">
         <p className='text-6xl mb-2' >{dict.Abilities.ESP}</p>
         <p className='text-l mb-12'>Aqui mostrare parte de mi formacion y las herramientas que he utilizado en mi carrera profesional</p>
         <div className=''>
@@ -58,7 +55,7 @@ export default function Body() {
 
       <section id="AFK" className="w-full h-[100vh] grid place-items-center bg-slate-500 snap-start">
         <p className='text-6xl mb-4' >{dict.AFK.ESP} - En proceso (Creo que todos no?)</p>
-      </section>
+      </section> */}
 
 
     </main>

@@ -24,7 +24,9 @@ export default function ScrollNavBar () {
             text: dict.Projects.ESP,
             href: '#Projects'
         },
-        {
+    ]
+    /*
+    {
             key: 'Abilities',
             text: dict.Abilities.ESP,
             href: '#Abilities'
@@ -34,15 +36,15 @@ export default function ScrollNavBar () {
             text: dict.AFK.ESP,
             href: '#AFK'
         }
-    ]
+    */
 
     return (
-        <Navbar>
+        <Navbar className="bg-slate-400">
             <NavbarContent className="md:hidden" justify="start">
                 <NavbarMenuToggle />
             </NavbarContent>
 
-            <NavbarContent className="hidden md:flex gap-4" justify="center">
+            <NavbarContent as="div" className="hidden md:flex md:gap-4 md:w-5/6 md:justify-around" justify="aroud">
                 {
                     shortCuts.map( (item, index) => (
                         <NavbarItem key={`$content-${index}`} >
@@ -52,7 +54,7 @@ export default function ScrollNavBar () {
                 }
             </NavbarContent>
             
-            <NavbarMenu>
+            <NavbarMenu className="bg-slate-400 opacity-95 backdrop-blur-xl backdrop-saturate-150">
                 {
                     shortCuts.map( (item, index) => (
                         <NavbarItem key={`$menu-${index}`} >

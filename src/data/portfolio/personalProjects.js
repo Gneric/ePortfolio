@@ -38,6 +38,7 @@ export const projects =
     name: 'Custom New Tab',
     description: 'Una pagina web simple pero customizable que me sirva como default al abrir una nueva pestaña, simplemente como una manera mas personalizada de usar internet.',
     tecnologies: 'NextJS - React',
+    url: '/blankTab',
     links: [
       { 
         name: 'github',

@@ -4,7 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: var(--scroll-padding, 7rem);
+  scroll-padding: var(--scroll-padding, 4rem);
 }
 a, p {
   font-family: 'PF Tempesta Five Condensed';

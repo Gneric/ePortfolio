@@ -12,7 +12,7 @@ export default function JobBlock({ companyName, jobTitle, jobDescription, dateRa
         <p className="mb-2">{ jobDescription }</p>
         <p className="text-3xl">Proyectos: </p>
       </div>
-      <div className='flex flex-wrap justify-around'>
+      <div className={`flex flex-wrap justify-start`}>
         {
           projects.map(project => (
             <ProjectBlock
@@ -20,7 +20,6 @@ export default function JobBlock({ companyName, jobTitle, jobDescription, dateRa
               title={project.title}
               description={project.description}
               tooltip={project.tooltip}
-              directionIndex={ projects.indexOf(project) % 2 != 0 }
             />
           ))
         }
