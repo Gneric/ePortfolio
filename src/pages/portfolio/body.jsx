@@ -1,9 +1,9 @@
-import JobBlock from '@/components/Portfolio/JobBlock'
-import ProjectBlock from '@/components/Portfolio/ProjectBlock'
+import JobBlock from '@/pages/portfolio/components/JobBlock'
+import ProjectBlock from '@/pages/portfolio/components/ProjectBlock'
 
-import { jobs } from '@/data/portfolio/workExperience'
-import { projects } from '@/data/portfolio/personalProjects'
-import { dictionary } from '@/data/portfolio/dictionary'
+import { jobs } from '@/pages/portfolio/data/workExperience'
+import { projects } from '@/pages/portfolio/data/personalProjects'
+import { dictionary } from '@/pages/portfolio/data/dictionary.js'
 
 export default function Body() {
   const dict = dictionary.Sections

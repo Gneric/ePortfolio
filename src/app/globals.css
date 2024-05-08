@@ -3,14 +3,8 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
   scroll-padding: var(--scroll-padding, 4rem);
 }
 a, p {
   font-family: 'PF Tempesta Five Condensed';
 }
-
-.navBarTransitionEffectClass {
-  transition: all 0.5s ease;
-}
-

@@ -1,5 +1,4 @@
 import '@/styles/blankTab/style.css'
-import Colors from "@/data/blankTab/colors"
 
 export default function Linkli({ value, prefix, url, textColor }) {
   return (

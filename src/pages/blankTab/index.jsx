@@ -1,76 +1,79 @@
-import '@/styles/fonts/fonts.css'
-import '@/styles/blankTab/style.css'
-import Colors from '@/data/blankTab/colors'
-// import links from '@/data/blanktab/links.js'
-import LinkLi from '@/components/blankTab/linkLi'
+import { useState, useEffect } from 'react'
 
-import AddButton from '@/components/blankTab/AddButton'
+import LinkLi from '@/pages/blankTab/components/LinkLi'
+import AddButton from '@/pages/blankTab/components/AddButton'
 
-import { useState } from 'react'
+var initialLinks = [
+  {
+    "key": ":ytb",
+    "url": "https://www.youtube.com/",
+    "placeholder": "Youtube"
+  },
+  {
+    "key": ":wsp",
+    "url": "https://web.whatsapp.com/",
+    "placeholder": "Whatsapp"
+  },
+  {
+    "key": ":gth",
+    "url": "http://github.com",
+    "placeholder": "Github"
+  },
+  {
+    "key": ":igm",
+    "url": "http://instagram.com",
+    "placeholder": "Instagram"
+  },
+  {
+    "key": ":nya",
+    "url": "https://nyafilmer.gg/",
+    "placeholder": "Nyafilmer"
+  }
+]
 
-export default function blankPage () {
-    var initialLinks = [
-        {
-          "key": ":ytb",
-          "url": "https://www.youtube.com/",
-          "placeholder": "Youtube",
-          "background": "#1877f2"
-        },
-        {
-          "key": ":wsp",
-          "url": "https://web.whatsapp.com/",
-          "placeholder": "Whatsapp"
-        },
-        {
-          "key": ":gth",
-          "url": "http://github.com",
-          "placeholder": "Github"
-        },
-        {
-          "key": ":igm",
-          "url": "http://instagram.com",
-          "placeholder": "Instagram"
-        },
-        {
-          "key": ":nya",
-          "url": "https://nyafilmer.gg/",
-          "placeholder": "Nyafilmer"
-        }
-      ]
-    const [links, setLinks] = useState(initialLinks)
+export default function BlankPage () {
+  const [links, setLinks] = useState([])
 
-    const addLink = ({ key, url, placeholder }) => {
-        setLinks([...links, {
-            "key": key,
-            "url": url,
-            "placeholder": placeholder
-        }])
-    }
+  useEffect(() => {
+    const storedLinks = JSON.parse(localStorage.getItem('storedLinks'))
+    if (storedLinks.length == 0 || storedLinks == null) { setLinks(initialLinks) } 
+    else { setLinks(storedLinks) }
+  }, [])
 
+  useEffect(() => {
+    localStorage.setItem('storedLinks', JSON.stringify(links))
+  }, [links])
 
-    const generatedlinks = links.map( item => {
-        return <LinkLi
-            key={item.placeholder}
-            value={item.placeholder}
-            prefix={item.key}
-            url={item.url}
-            textColor={Colors.textColor.dark}
-        />
-    })
+  const handleAddLink = ({ key, url, placeholder }) => {
+    setLinks([...links, { "key": key, "url": url, "placeholder": placeholder }])
+  }
 
-    return (
-        <div id="blank-container" className='h-screen'  style={{ backgroundColor: Colors.backgroundColor.dark, width: '100%' }} >
-            <div id="blocked">
-                <div id="logo" style={{ color: Colors.textColor.dark }}> いらっしゃいませ </div>
-                <div id="linkblock">
-                    <div id="links">
-                        <ul>{generatedlinks}</ul>
-                        <ul>
-                            <AddButton key={'addButtonBlankTab'} addLink={addLink} ulkey={':ggl'} url={'https://www.google.com/'} placeholder={'google'} />
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+  const handleRemoveLink = ({ key }) => {
+    const newTodos = links.filter((i) => i.key !== key)
+    setLinks(newTodos)
+  }
+
+  const generatedlinks = links.map( item => {
+      return <LinkLi
+          key={Math.random()}
+          value={item.placeholder}
+          prefix={item.key}
+          url={item.url}
+          textColor={'#f4f3f7'}
+      />
+  })
+
+  return (
+    <div className="flex items-center h-screen m-auto w-screen" style={{ backgroundColor: '#171928' }} >
+      <div className='block text-center w-screen'>
+          <div className='font-meiryo text-8xl font-bold' style={{ color: '#f4f3f7' }}> いらっしゃいませ </div>
+          <div id="linkblock">
+              <div id="links">
+                  <ul>{generatedlinks}</ul>
+              </div>
+          </div>
+          <AddButton key={'addButtonBlankTab'} addLink={handleAddLink} ulkey={':ggl'} url={'https://www.google.com/'} placeholder={'google'} />
+      </div>
+    </div>
+  )
 }

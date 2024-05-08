@@ -2,7 +2,7 @@ import Colors from '@/utils/pallete'
 import Header from './header'
 import Body from './body'
 
-import ScrollNavBar from "@/components/Portfolio/ScrollNavBar"
+import ScrollNavBar from "@/pages/portfolio/components/ScrollNavBar"
 
 import '@/styles/portfolio/style.css'
 

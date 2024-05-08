@@ -1,5 +1,5 @@
 import React from "react";
-export const addCircle = (props) => (
+export const AddCircle = (props) => (
     <svg
         aria-hidden="true"
         focusable="false"
@@ -11,7 +11,7 @@ export const addCircle = (props) => (
     >
       <path
         d="M15 12L12 12M12 12L9 12M12 12L12 9M12 12L12 15"
-        stroke={fill}
+        // stroke={fill}
         strokeWidth={1.5}
         strokeLinecap="round"
         strokeLinejoin="round"

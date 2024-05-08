@@ -1,6 +1,6 @@
 import { Modal, ModalContent, ModalHeader, ModalFooter, ModalBody, Button, useDisclosure } from "@nextui-org/react";
 
-import ThemeSwitcher from './ThemeSwitcher'
+import ThemeSwitcher from '@/pages/portfolio/components/ThemeSwitcher'
 
 export default function SettingsMenu() {
   const {isOpen, onOpen, onOpenChange} = useDisclosure()

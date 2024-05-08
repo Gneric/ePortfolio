@@ -1,9 +1,9 @@
-import NavBarLink from "./NavBarLink"
-import SettingsMenu from './SettingsMenu'
+import NavBarLink from "@/pages/portfolio/components/NavBarLink"
+import SettingsMenu from '@/pages/portfolio/components/SettingsMenu'
 
 import { Navbar, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuToggle } from "@nextui-org/react";
 
-import { dictionary } from '@/data/portfolio/dictionary'
+import { dictionary } from '@/pages/portfolio/data/dictionary'
 
 export default function ScrollNavBar () {
     const dict = dictionary.Sections
