@@ -64,16 +64,24 @@ export default function BlankPage () {
   })
 
   return (
-    <div className="flex items-center h-screen m-auto w-screen" style={{ backgroundColor: '#171928' }} >
-      <div className='block text-center w-screen'>
-          <div className='font-meiryo text-8xl font-bold' style={{ color: '#f4f3f7' }}> いらっしゃいませ </div>
-          <div id="linkblock">
-              <div id="links">
-                  <ul>{generatedlinks}</ul>
-              </div>
-          </div>
-          <AddButton key={'addButtonBlankTab'} addLink={handleAddLink} ulkey={':ggl'} url={'https://www.google.com/'} placeholder={'google'} />
+    <div className="flex flex-col justify-center h-screen w-screen" style={{ backgroundColor: '#171928' }} >
+      <div className='self-center font-meiryo text-8xl font-bold' style={{ color: '#f4f3f7' }}> いらっしゃいませ </div>
+      <div id="links" className='self-center pt-12 w-8/12'>
+          <ul className='p-0'>
+            {generatedlinks}
+          </ul>
       </div>
+
+      {/* <div className='block text-center w-screen'>
+          
+          
+          <li>
+              <a onClick={() => handleAddLink({ key: ':ggl', url:'https://www.google.com/', placeholder:'google' })} className='black-a' target='_blank'>
+                  <span>:++</span>
+                  <span style={{ color: '#f4f3f7' }} >Add</span>
+              </a>
+          </li>
+      </div> */}
     </div>
   )
 }

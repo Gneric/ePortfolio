@@ -11,7 +11,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'meiryo': ['Meiryo']
+      'meiryo': ['Meiryo'],
+      'tempesta': ['PF Tempesta Five Condensed']
     },
     extend: {},
   },
