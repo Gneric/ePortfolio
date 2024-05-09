@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Button } from "@nextui-org/button";
 
 import LinkLi from '@/pages/blankTab/components/LinkLi'
 import AddButton from '@/pages/blankTab/components/AddButton'
@@ -32,11 +33,12 @@ var initialLinks = [
 ]
 
 export default function BlankPage () {
+  const [editMode, setEditMode] = useState(false)
   const [links, setLinks] = useState([])
 
   useEffect(() => {
     const storedLinks = JSON.parse(localStorage.getItem('storedLinks'))
-    if (storedLinks.length == 0 || storedLinks == null) { setLinks(initialLinks) } 
+    if (storedLinks == null) { if (links.length == 0) { setLinks(initialLinks) }} 
     else { setLinks(storedLinks) }
   }, [])
 
@@ -56,32 +58,22 @@ export default function BlankPage () {
   const generatedlinks = links.map( item => {
       return <LinkLi
           key={Math.random()}
-          value={item.placeholder}
           prefix={item.key}
+          value={item.placeholder}
           url={item.url}
-          textColor={'#f4f3f7'}
+          editMode={editMode}
+          // handleRemoveLink={handleRemoveLink}
       />
   })
 
   return (
-    <div className="flex flex-col justify-center h-screen w-screen" style={{ backgroundColor: '#171928' }} >
-      <div className='self-center font-meiryo text-8xl font-bold' style={{ color: '#f4f3f7' }}> いらっしゃいませ </div>
-      <div id="links" className='self-center pt-12 w-8/12'>
-          <ul className='p-0'>
-            {generatedlinks}
-          </ul>
-      </div>
-
-      {/* <div className='block text-center w-screen'>
-          
-          
-          <li>
-              <a onClick={() => handleAddLink({ key: ':ggl', url:'https://www.google.com/', placeholder:'google' })} className='black-a' target='_blank'>
-                  <span>:++</span>
-                  <span style={{ color: '#f4f3f7' }} >Add</span>
-              </a>
-          </li>
-      </div> */}
+    <div className="flex flex-col justify-center items-center h-screen w-screen" style={{ backgroundColor: '#171928' }} >
+      <div className='font-meiryo text-8xl font-bold' style={{ color: '#f4f3f7' }}> いらっしゃいませ </div>
+      <ul className='flex flex-wrap pt-12 w-8/12 justify-evenly p-0'>
+        {generatedlinks}
+      </ul>
+      <Button className='font-bold absolute top-5 left-5' onPress={ () => setEditMode(!editMode) } color="warning">Edit Mode</Button>
+      <AddButton addLink={handleAddLink} ulkey={':ggl'} url={'https://www.google.com/'} placeholder={'google'} />
     </div>
   )
 }
