@@ -1,6 +1,6 @@
 import Colors from '@/utils/pallete'
-import Header from './header'
-import Body from './body'
+import Header from '@/pages/portfolio/header'
+import Body from '@/pages/portfolio/body'
 
 import ScrollNavBar from "@/pages/portfolio/components/ScrollNavBar"
 

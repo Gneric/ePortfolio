@@ -1,8 +1,8 @@
 import JobBlock from '@/pages/portfolio/components/JobBlock'
 import ProjectBlock from '@/pages/portfolio/components/ProjectBlock'
 
-import { jobs } from '@/pages/portfolio/data/workExperience'
-import { projects } from '@/pages/portfolio/data/personalProjects'
+import { jobs } from '@/pages/portfolio/data/workExperience.js'
+import { projects } from '@/pages/portfolio/data/personalProjects.js'
 import { dictionary } from '@/pages/portfolio/data/dictionary.js'
 
 export default function Body() {
@@ -39,6 +39,8 @@ export default function Body() {
                 title={project.name}
                 description={project.description}
                 tooltip={project.tecnologies}
+                urlDemo={project.urlDemo}
+                urlGithub={project.urlGithub}
               />
             ))
           }

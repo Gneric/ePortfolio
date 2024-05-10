@@ -20,6 +20,8 @@ export default function JobBlock({ companyName, jobTitle, jobDescription, dateRa
               title={project.title}
               description={project.description}
               tooltip={project.tooltip}
+              urlDemo={project.urlDemo}
+              urlGithub={project.urlGithub}
             />
           ))
         }
