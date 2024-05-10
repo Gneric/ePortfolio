@@ -50,8 +50,9 @@ export default function BlankPage () {
     setLinks([...links, { "key": key, "url": url, "placeholder": placeholder }])
   }
 
-  const handleRemoveLink = ({ key }) => {
-    const newTodos = links.filter((i) => i.key !== key)
+  const handleRemoveLink = ({ url }) => {
+    console.log('Deleting ' + url)
+    const newTodos = links.filter((i) => i.url !== url)
     setLinks(newTodos)
   }
 
@@ -62,7 +63,7 @@ export default function BlankPage () {
           value={item.placeholder}
           url={item.url}
           editMode={editMode}
-          // handleRemoveLink={handleRemoveLink}
+          handleRemoveLink={handleRemoveLink}
       />
   })
 
