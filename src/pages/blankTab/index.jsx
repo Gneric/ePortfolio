@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Button } from "@nextui-org/button";
-
+import { useDisclosure, Input } from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/modal";
 import LinkLi from '@/pages/blankTab/components/LinkLi'
-import AddButton from '@/pages/blankTab/components/AddButton'
 
 var initialLinks = [
   {
@@ -33,8 +33,12 @@ var initialLinks = [
 ]
 
 export default function BlankPage () {
+  const {isOpen, onOpen, onOpenChange} = useDisclosure()
   const [editMode, setEditMode] = useState(false)
   const [links, setLinks] = useState([])
+  const [placeholder, setPlaceholder] = useState('')
+  const [url, setUrl] = useState('')
+
 
   useEffect(() => {
     const storedLinks = JSON.parse(localStorage.getItem('storedLinks'))
@@ -46,8 +50,14 @@ export default function BlankPage () {
     localStorage.setItem('storedLinks', JSON.stringify(links))
   }, [links])
 
-  const handleAddLink = ({ key, url, placeholder }) => {
-    setLinks([...links, { "key": key, "url": url, "placeholder": placeholder }])
+  const handleAddLink = () => {
+    if( links.find( item => item.url === url ) ) {return}
+    else {
+      let key = `:${placeholder.substring(0, 3)}`
+      setLinks([...links, { "key": key, "url": url, "placeholder": placeholder }])
+      setPlaceholder('')
+      setUrl('')
+    }
   }
 
   const handleRemoveLink = ({ url }) => {
@@ -73,8 +83,28 @@ export default function BlankPage () {
       <ul className='flex flex-wrap pt-12 w-8/12 justify-evenly p-0'>
         {generatedlinks}
       </ul>
-      <Button className='font-bold absolute top-5 left-5' onPress={ () => setEditMode(!editMode) } color="warning">Edit Mode</Button>
-      <AddButton addLink={handleAddLink} ulkey={':ggl'} url={'https://www.google.com/'} placeholder={'google'} />
+      <div className='w-screen absolute bottom-5 text-center' >
+        <Button className='font-bold m-2' onPress={ () => setEditMode(!editMode) } color="warning">Edit Mode</Button>
+        <Button className='font-bold m-2' onPress={onOpen} color="success">Add Link</Button>
+        <Modal isOpen={isOpen} onOpenChange={onOpenChange} placement="top-center">
+          <ModalContent className='bg-slate-800' >
+            {(onClose) => (
+              <>
+                <ModalHeader className="flex flex-col gap-1 font-bold text-white">Add Link</ModalHeader>
+                <ModalBody>
+                  <Input autoFocus required label="Name" placeholder="Enter the name" variant="faded" value={placeholder} onChange={(e) => setPlaceholder(e.target.value)} />
+                  <Input required label="URL" placeholder="Enter the URL" variant="faded" value={url} onChange={(e) => setUrl(e.target.value)} />
+                </ModalBody>
+                <ModalFooter>
+                  <Button color="primary" onPress={() => { onClose(); handleAddLink() }}>
+                    Add
+                  </Button>
+                </ModalFooter>
+              </>
+            )}
+          </ModalContent>
+        </Modal>
+      </div>
     </div>
   )
 }
