@@ -1,5 +1,4 @@
-export const projects = 
-[
+const projects = [
   {
     name: 'Remindeer',
     description: 'Aplicativo multiplataforma que se usa como apoyo para la creacion sana de habitos mediante un ejercicio de puntos acumulativos por habitos realizados diariamente o bajo un rango horario.',
@@ -22,3 +21,5 @@ export const projects =
     urlGithub: '',
   }
 ]
+
+export default projects

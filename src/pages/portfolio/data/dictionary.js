@@ -1,4 +1,4 @@
-export const dictionary = {
+const dictionary = {
   Sections: {
     About: {
       ESP: 'Sobre Mi',
@@ -23,3 +23,5 @@ export const dictionary = {
   },
   
 }
+
+export default dictionary

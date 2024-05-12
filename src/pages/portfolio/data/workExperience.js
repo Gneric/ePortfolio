@@ -1,5 +1,4 @@
-export const jobs = 
-[
+const jobs = [
   {
     companyName: 'Freelance - Galmisoft',
     jobTitle: 'Desarrollador Back End',
@@ -80,3 +79,5 @@ export const jobs =
     ]
   }
 ]
+
+export default jobs
