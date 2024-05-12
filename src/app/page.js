@@ -22,7 +22,7 @@ export default function Home() {
 
   const card = ({ link, name, imagealt, imagesrc }) => {
     return (
-      <Card isPressable className="py-4" onPress={ () => { window.open(`/${link}`, '_self') }}>
+      <Card key={Math.random()} isPressable className="py-4" onPress={ () => { window.open(`/${link}`, '_self') }}>
         <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
           <h4 className="font-bold text-large">{name}</h4>
         </CardHeader>
