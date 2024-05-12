@@ -1,17 +1,56 @@
 'use client'
 
 import { Link } from "@nextui-org/react"
+import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
 
 export default function Home() {
+
+  const projects = [
+    {
+      link: 'portfolio',
+      name: 'ePortfolio',
+      imagealt: 'Portfolio',
+      imagesrc: 'https://nextui.org/images/hero-card-complete.jpeg'
+    },
+    {
+      link: 'blankTab',
+      name: 'Blank Tab',
+      imagealt: 'Blank Tab',
+      imagesrc: 'https://nextui.org/images/hero-card-complete.jpeg'
+    }
+  ]
+
+  const card = ({ link, name, imagealt, imagesrc }) => {
+    return (
+      <Card isPressable className="py-4" onPress={ () => { window.open(`/${link}`, '_self') }}>
+        <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+          <h4 className="font-bold text-large">{name}</h4>
+        </CardHeader>
+        <CardBody className="overflow-visible py-2">
+          <Image
+            alt={imagealt}
+            className="object-cover rounded-xl"
+            src={imagesrc}
+            width={270}
+          />
+        </CardBody>
+      </Card>
+    )
+  }
+
   return ( 
-    <div className="p-20 grid place-items-center h-screen w-screen">
-      <div className="flex justify-center" >
-        <p className="text-3xl font-bold">Home Page being created, for now check out these projects:</p>
-        <div className="py-5" > 
-          <Link href="/portfolio">Portfolio</Link>
-          <Link href="/blankTab">blankTab</Link>
+    <div className="grid place-items-center h-screen w-screen bg-slate-800 text-white">
+        <p className="text-4xl font-bold m-10">
+          Hola, esta pagina es un trabajo en proceso, si quieres ver algun proyecto en especifico, puedes hacer click en el enlace de abajo.
+        </p>
+        <div className="flex w-screen flex-wrap justify-evenly">
+            {
+              projects.map((project) => {
+                return card(project)
+              })
+            }       
         </div>
-      </div>
     </div>
   )
 }
+

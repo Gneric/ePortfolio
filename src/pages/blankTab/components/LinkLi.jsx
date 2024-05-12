@@ -13,7 +13,7 @@ export default function Linkli({ itemKey, prefix, placeholder, url, editMode, ha
       handleEditLink({ itemKey })
     } else {
       console.log('Opening ' + url)
-      window.location.href = url;
+      window.open(`https://${url}`, '_self');
     }
   }
 

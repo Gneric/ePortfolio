@@ -9,7 +9,7 @@ export default function Body() {
   const dict = dictionary.Sections
 
   return (
-    <main className='flex flex-col snap-y'>
+    <main className='flex flex-col snap-y font-tempesta'>
       <section id="Experience" className="w-full bg-slate-500 snap-start p-10">
         <p className="text-6xl mb-4">{dict.Experience.ESP}</p>
         <div className="flex flex-col justify-content-between mb-5">
@@ -46,20 +46,6 @@ export default function Body() {
           }
         </div>
       </section>
-
-      {/* <section id="Abilities" className="w-full bg-slate-500 snap-start p-10">
-        <p className='text-6xl mb-2' >{dict.Abilities.ESP}</p>
-        <p className='text-l mb-12'>Aqui mostrare parte de mi formacion y las herramientas que he utilizado en mi carrera profesional</p>
-        <div className=''>
-            
-        </div>
-      </section>
-
-      <section id="AFK" className="w-full h-[100vh] grid place-items-center bg-slate-500 snap-start">
-        <p className='text-6xl mb-4' >{dict.AFK.ESP} - En proceso (Creo que todos no?)</p>
-      </section> */}
-
-
     </main>
   )
 }

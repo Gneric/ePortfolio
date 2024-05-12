@@ -1,5 +1,4 @@
 import NavBarLink from "@/pages/portfolio/components/NavBarLink"
-import SettingsMenu from '@/pages/portfolio/components/SettingsMenu'
 
 import { Navbar, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuToggle } from "@nextui-org/react";
 
@@ -39,15 +38,15 @@ export default function ScrollNavBar () {
     */
 
     return (
-        <Navbar className="bg-slate-400">
+        <Navbar className="bg-slate-400 font-tempesta" classNames={{ header: 'max-w-full' }} >
             <NavbarContent className="md:hidden" justify="start">
                 <NavbarMenuToggle />
             </NavbarContent>
 
-            <NavbarContent as="div" className="hidden md:flex md:gap-4 md:w-screen md:justify-around" justify="aroud">
+            <NavbarContent as="div" className="hidden md:flex md:gap-4 md:w-full md:max-w-full md:justify-around " justify="aroud">
                 {
                     shortCuts.map( (item, index) => (
-                        <NavbarItem key={`$content-${index}`} >
+                        <NavbarItem key={`$content-${index}`} className="h-full flex-grow" >
                             <NavBarLink key={`content-${item.key}`} text={item.text} href={item.href}/>
                         </NavbarItem>
                     ))
@@ -63,10 +62,6 @@ export default function ScrollNavBar () {
                     ))
                 }
             </NavbarMenu>
-
-            {/* <NavbarContent as="div" justify="end">
-                <SettingsMenu></SettingsMenu>
-            </NavbarContent>          */}
 
         </Navbar>
     )

@@ -20,7 +20,7 @@ var initialLinks = [
   {
     "key": Math.random()  * 10 ** 17,
     "prefix": ":gth",
-    "url": "http://github.com",
+    "url": "https://github.com",
     "placeholder": "Github"
   },
   {
@@ -147,6 +147,11 @@ export default function BlankPage () {
                     label="URL" 
                     placeholder="Enter the URL" 
                     variant="flat" 
+                    startContent={
+                      <div className="pointer-events-none flex items-center">
+                        <span className="text-default-400 text-small">https://</span>
+                      </div>
+                    }
                     value={url} onChange={(e) => setUrl(e.target.value)} 
                   />
                 </ModalBody>

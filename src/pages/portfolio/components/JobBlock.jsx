@@ -4,7 +4,7 @@ import ProjectBlock from '@/pages/portfolio/components/ProjectBlock'
 export default function JobBlock({ companyName, jobTitle, jobDescription, dateRange, projects }) {
 
   return (
-    <div className="flex-1 mb-10">
+    <div className="flex-1 mb-10 font-tempesta">
       <div className="md:w-full lg:w-1/2 mb-10">
         <p className="mt-2" >{ dateRange }</p>
         <p className="text-4xl mb-2">{ companyName }</p>
