@@ -2,40 +2,24 @@ import NavBarLink from "@/pages/portfolio/components/NavBarLink"
 
 import { Navbar, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuToggle } from "@nextui-org/react";
 
-import dictionary from '@/data/portfolio/dictionary'
-
 export default function ScrollNavBar () {
-    const dict = dictionary.Sections
-
     const shortCuts = [
         {
             key: 'About',
-            text: dict.About.ESP,
+            text: 'Sobre Mi',
             href: '#About'
         },
         {
             key: 'Experience',
-            text: dict.Experience.ESP,
+            text: 'Experiencia',
             href: '#Experience'
         },
         {
             key: 'Projects',
-            text: dict.Projects.ESP,
+            text: 'Proyectos',
             href: '#Projects'
         },
     ]
-    /*
-    {
-            key: 'Abilities',
-            text: dict.Abilities.ESP,
-            href: '#Abilities'
-        },
-        {
-            key: 'AFK',
-            text: dict.AFK.ESP,
-            href: '#AFK'
-        }
-    */
 
     return (
         <Navbar className="bg-slate-400 font-tempesta" classNames={{ header: 'max-w-full' }} >
