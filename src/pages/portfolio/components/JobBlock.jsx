@@ -12,9 +12,9 @@ export default function JobBlock({ companyName, jobTitle, jobDescription, dateRa
         <p className="mb-2">{ jobDescription }</p>
         <p className="text-3xl">Proyectos: </p>
       </div>
-      <div className={`flex flex-wrap justify-start`}>
+      <div className={`flex flex-wrap justify-between md:w-5/6 mx-auto`}>
         {
-          projects.map(project => (
+          projects.map((project, index) => (
             <ProjectBlock
               key={project.title}
               title={project.title}
