@@ -38,18 +38,17 @@ export default function BlankPage () {
   const [placeholder, setPlaceholder] = useState('')
   const [url, setUrl] = useState('')
   const [itemKey, setItemKey] = useState('')
+  const [initialLoad, setInitialLoad] = useState(true)
 
 
   useEffect(() => {
-    const storedLinks = JSON.parse(localStorage.getItem('storedLinks'))
-    if (storedLinks == null) { if (links.length == 0) { setLinks(initialLinks) }} 
-    else { setLinks(storedLinks) }
-  }, [])
-
-  useEffect(() => {
-    console.log('Change on links detected, changing local storage')
-    localStorage.setItem('storedLinks', JSON.stringify(links))
-  }, [links])
+    if (initialLoad) {
+      const storedLinks = JSON.parse(localStorage.getItem('storedLinks'))
+      if (storedLinks == null) { setLinks(initialLinks) }
+      else { setLinks(storedLinks) }
+      setInitialLoad(false)
+    }
+  }, [initialLoad])
 
   const handleSubmitModal = () => {
     if ( editMode ) {

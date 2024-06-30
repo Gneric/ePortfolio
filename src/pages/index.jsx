@@ -1,6 +1,3 @@
-'use client'
-
-import { Link } from "@nextui-org/react"
 import { Card, CardHeader, CardBody, Image } from "@nextui-org/react";
 
 export default function Home() {
@@ -9,14 +6,12 @@ export default function Home() {
     {
       link: 'portfolio',
       name: 'ePortfolio',
-      imagealt: 'Portfolio',
-      imagesrc: 'https://nextui.org/images/hero-card-complete.jpeg'
+      imagealt: 'Portfolio'
     },
     {
       link: 'blankTab',
       name: 'Blank Tab',
-      imagealt: 'Blank Tab',
-      imagesrc: 'https://nextui.org/images/hero-card-complete.jpeg'
+      imagealt: 'Blank Tab'
     }
   ]
 
@@ -30,7 +25,6 @@ export default function Home() {
           <Image
             alt={imagealt}
             className="object-cover rounded-xl"
-            src={imagesrc}
             width={270}
           />
         </CardBody>
