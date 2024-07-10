@@ -8,15 +8,12 @@ export default function Body() {
 
   useEffect( () => {
     async function fetchData() {
-      let exp_res = await fetch('/api/experience')
-      let experience = await exp_res.json()
-
-      let proj_res = await fetch('/api/projects')
-      let projects = await proj_res.json()
-
-      console.log('experience', experience)
-      console.log('projects', projects)
+      const exp_res = await fetch('/api/experience')
+      const experience = await exp_res.json()
       setExperience(experience.jobs)
+
+      const proj_res = await fetch('/api/projects')
+      const projects = await proj_res.json()
       setProjects(projects.projects)
     }
 
