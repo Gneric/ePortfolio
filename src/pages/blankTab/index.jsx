@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Button } from "@nextui-org/button";
 import { useDisclosure, Input } from "@nextui-org/react";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/modal";
-import LinkLi from '@/pages/blankTab/components/LinkLi'
+import LinkLi from '@/components/blankTab/LinkLi'
 
 var initialLinks = [
   {

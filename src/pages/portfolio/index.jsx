@@ -1,7 +1,7 @@
-import Header from '@/pages/portfolio/header'
-import Body from '@/pages/portfolio/body'
+import Header from '@/components/portfolio/header'
+import Body from '@/components/portfolio/body'
 
-import ScrollNavBar from "@/pages/portfolio/components/ScrollNavBar"
+import ScrollNavBar from "@/components/portfolio/ScrollNavBar"
 
 export default function Porfolio() {
     return (

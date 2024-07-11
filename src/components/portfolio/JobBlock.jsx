@@ -1,5 +1,5 @@
 
-import ProjectBlock from '@/pages/portfolio/components/ProjectBlock'
+import ProjectBlock from '@/components/portfolio/ProjectBlock'
 
 export default function JobBlock({ companyName, jobTitle, jobDescription, dateRange, projects }) {
 

@@ -1,5 +1,5 @@
-import JobBlock from '@/pages/portfolio/components/JobBlock'
-import ProjectBlock from '@/pages/portfolio/components/ProjectBlock'
+import JobBlock from '@/components/portfolio/JobBlock'
+import ProjectBlock from '@/components/portfolio/ProjectBlock'
 import { useEffect, useState } from 'react'
 
 export default function Body() {

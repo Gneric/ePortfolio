@@ -1,4 +1,4 @@
-import NavBarLink from "@/pages/portfolio/components/NavBarLink"
+import NavBarLink from "@/components/portfolio/NavBarLink"
 
 import { Navbar, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuToggle } from "@nextui-org/react";
 
