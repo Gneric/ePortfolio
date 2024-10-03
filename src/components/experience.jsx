@@ -1,30 +1,26 @@
 export default function Experience() {
 
     const jobs = [
-        // {
-        //     "company": "Freelance",
-        //     "jobTitle": "",
-        //     "description": "Diseño, desarrollo e implementacion de sistemas back end para diversos proyectos",
-        //     "skills": ["JavaScript", "SQLite"]
-        // },
         {
             "company": "Vidasofware S.A.C",
             "jobTitle": "Desarrollador Full Stack",
             "description": "Desarrollo de microservicios, servicios y portales web y automatizaciones para el macroproceso ETL de la empresa.",
             "start": "Ene. 2021",
             "end": "Actual",
-            "skills": ["React", "Vue", "Python", "JavaScript", "C#"],
+            "skills": ["Python", "JavaScript", "SQL", "Prisma", "React", "Vue"],
             "responsabilities": [
                 "Implementar los módulos de autoservicio",
                 "Implementar programas de ingesta y/o envio de datos.",
-                "Implementar microprocesos.",
+                "Implementar micro procesos (NodeJS, NodeMailer, Python, SMTPLib) para la mejora de gestión en el macroproceso ETL.",
                 "Implementar un sistema modular web para la ingesta y homologacion de productos.",
-                "Implementacion de un sistema de registro para el analisis y seguimiento de los programas internos."
+                "Implementar un sistema de registro para el análisis y seguimiento de los programas internos.",
+                "Desarrollo de mejoras y cambios visuales para web principal de Strategio (Javascript, Vue).",
+                "Desarrollo de servicio (Python, Flask, GraphQL) de automatización para web de S&OP (Sales and Operation Planning)."
             ]
         },
         {
             "company": "Vidasofware S.A.C",
-            "jobTitle": "Desarrollador Full Stack",
+            "jobTitle": "Analista Desarrollador Bussiness Inteligence",
             "description": "Administrador y mantenimiento de bases de datos ademas de gestion de proceso ETL.",
             "start": "Nov. 2018",
             "end": "Dic. 2020",
@@ -35,11 +31,24 @@ export default function Experience() {
                 "Implementacion de programas (Python) para la mejora de proceso ETL.",
                 "Implementacion de sistema de conversion y normalizacion de productos."
             ]
+        },
+        {
+            "company": "Freelance",
+            "jobTitle": "Desarrollador Full Stack",
+            "description": "",
+            "start": "",
+            "end": "",
+            "skills": ["Python", "Javascript", "Prisma"],
+            "responsabilities": [
+                "Modelado y creación de sistemas de bases de datos",
+                "Diseño y desarrollo de servicios web API (NodeJS, Express).",
+                "Desarrollo de programas de ingesta y transformación de datos (Python, Pandas, Prisma)."
+            ]
         }
     ]
 
     return (
-        <div className = "mt-10 text-text font-normal lg:mt-20">
+        <div id="experience" className = "mt-10 text-text font-normal lg:mt-20">
             <h1 className = "text-text mb-5 text-base font-bold uppercase tracking-widest lg:text-lg">Experiencia</h1>
             <div>
                 {

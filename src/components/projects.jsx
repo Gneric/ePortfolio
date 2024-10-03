@@ -5,7 +5,6 @@ export default function Projects() {
             name: 'ePortfolio V1',
             description: 'Pagina web que que funcione como showcase para mis estudios, mis trabajos, mis habilidades y parte de mi vida con el toque que me identifica.',
             tecnologies: ["NextJS", "React"],
-            url: '',
         },
         {
             name: 'Custom Blank Tab',
@@ -16,7 +15,7 @@ export default function Projects() {
     ]
 
     return (
-        <div className = "mt-14">
+        <div id="projects" className = "mt-16">
             <h1 className = "text-text mb-5 text-base font-bold uppercase tracking-widest lg:text-lg">Proyectos</h1>
             <div>
                 {
@@ -32,7 +31,7 @@ export default function Projects() {
                                                     <img src="/icons/arrow-up-right-svgrepo-com.svg" className="inline h-2 w-2" />
                                                 </a>
                                             ) : (
-                                                <p className="font-bold tracking-wider text-text hover:text-primary transition-colors" >{name}</p>
+                                                <p className="font-bold tracking-wider text-text" >{name}</p>
                                             )
                                         }
                                         {
