@@ -28,8 +28,8 @@ export default function Info() {
                 {
                     sections.map(({ name, url }, index) => {
                         return (
-                            <a href = {url} className = "rounded-md text-text text-sm font-semibold hover:bg-primary hover:text-text transition-colors bg-accent">
-                                <div key={`sections-${index}`} className = "p-2 min-w-[100px] text-center">
+                            <a key={`sections-${index}`} href = {url} className = "rounded-md text-text text-sm font-semibold hover:bg-primary hover:text-text transition-colors bg-accent">
+                                <div className = "p-2 min-w-[100px] text-center">
                                     <p>{name}</p>
                                 </div>
                             </a>

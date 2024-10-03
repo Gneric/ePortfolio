@@ -9,8 +9,7 @@ export default function Projects() {
         {
             name: 'Custom Blank Tab',
             description: 'Una pagina web simple pero customizable que me sirva como default al abrir una nueva pestaña, simplemente como una manera para personalizar mi buscador.',
-            tecnologies: ["NextJS", "React"],
-            url: '/blankTab',
+            tecnologies: ["NextJS", "React"]
         }
     ]
 
